@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity
     private String lname;
     private String email;
 
+    public User currUser;
+
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference usersRef = database.getReference("users");
 
@@ -54,7 +56,7 @@ public class MainActivity extends AppCompatActivity
     public void createUser(String fname, String lname, String email)
     {
         DatabaseReference tempUser = usersRef.push();
-        User currUser = new User(fname, lname, email);
+        currUser = new User(fname, lname, email);
         tempUser.setValue(currUser);
     }
 

@@ -22,7 +22,7 @@ public class UserInfo extends AppCompatActivity {
         this.studentIDET = (EditText)this.findViewById(R.id.studentIDET);
         this.bookingDateTV = (TextView)this.findViewById(R.id.bookingDateTV);
         this.dateET = (EditText)this.findViewById(R.id.dateET);
-        this.startTimeTV = (TextView)findViewById(R.id.startTimeTV);
+        //this.startTimeTV = (TextView)findViewById(R.id.startTimeTV);
         this.startTimeET = (EditText)findViewById(R.id.studentIDET);
 
     }
