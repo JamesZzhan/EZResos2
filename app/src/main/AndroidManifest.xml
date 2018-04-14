@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".HomePage" />
-        <activity android:name=".UserInfo"></activity>
+        <activity android:name=".manual_reservation"></activity>
     </application>
 
 </manifest>
