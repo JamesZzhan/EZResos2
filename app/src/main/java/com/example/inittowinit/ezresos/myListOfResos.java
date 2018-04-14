@@ -1,4 +1,4 @@
-package com.example.inittowinit.ezresos;
+/*package com.example.inittowinit.ezresos;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -26,7 +26,7 @@ public class myListOfResos extends AppCompatActivity
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent i = new Intent(rList, delete.class);
-                Reservation.selectedReservation = Reservation.currentReservation.get(position);
+                //Reservation.selectedReservation = Reservation.currentReservation.get(position);
                 rList.startActivity(i);
             }
         });
@@ -65,3 +65,4 @@ public class myListOfResos extends AppCompatActivity
 
     }
 }
+*/

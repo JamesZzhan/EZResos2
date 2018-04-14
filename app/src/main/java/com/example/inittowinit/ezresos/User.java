@@ -14,7 +14,7 @@ public class User
         return myReservations;
     }
 
-    public static ArrayList<Reservation> myReservations;
+    public static ArrayList<Reservation> myReservations = new ArrayList<>();
 
     public String getUserID()
     {

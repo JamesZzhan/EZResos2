@@ -1,5 +1,6 @@
 package com.example.inittowinit.ezresos;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -51,26 +52,23 @@ public class manual_reservation extends AppCompatActivity {
 
     public void onSubmitButtonClicked(View v)
     {
+        System.out.print("CLICKED!!");
         String roomName = this.roomName.getText().toString();
         int startTime = Integer.parseInt(startTimeET.getText().toString());
         String endTime = this.endTimeET.getText().toString();
         String date = this.dateView.getText().toString();
         int peopleNumber = Integer.parseInt(peopleView.getText().toString());
 
-        for(int i = 0; i <= Classroom.allClassrooms.size(); i++)
-        {
-            if (Classroom.allClassrooms.contains(roomName))
-            {
-                if (peopleNumber <= Classroom.allClassrooms.get(i).roomSize)
-                {
+
                     DatabaseReference tempRes = reservationsRef.push();
                     currRes = new Reservation(roomName, date, startTime, peopleNumber);
                     tempRes.setValue(currRes);
                     Reservation.currentReservations.add(currRes);
                     User.myReservations.add(currRes);
-                }
-            }
-        }
+
+                    Intent intent = new Intent(this, HomePage.class);
+                    this.startActivity(intent);
+
     }
 
 

@@ -30,14 +30,14 @@ public class HomePage extends AppCompatActivity
 
     public void cancelResoButtonPressed (View v)
     {
-        Intent i = new Intent(this, myListOfResos.class);
-        this.startActivity(i);
+        //Intent i = new Intent(this, myListOfResos.class);
+        //this.startActivity(i);
     }
 
     public void myResosButtonPressed (View v)
     {
-        Intent i = new Intent(this,myListOfResos.class);
-        this.startActivity(i);
+        //Intent i = new Intent(this,myListOfResos.class);
+        //this.startActivity(i);
     }
 
     
