@@ -36,10 +36,6 @@ public class MainActivity extends AppCompatActivity
         this.lnameET = (EditText)this.findViewById(R.id.lnameTextBox);
         this.emailET = (EditText)this.findViewById(R.id.emailTextBox);
 
-        this.fname = this.fnameET.getText().toString();
-        this.lname = this.lnameET.getText().toString();
-        this.email = this.emailET.getText().toString();
-
         usersRef.addValueEventListener(new ValueEventListener()
         {
 
@@ -66,7 +62,12 @@ public class MainActivity extends AppCompatActivity
         });
     }
 
-    public void continueAsGuestButtonPressed(View v) {
+    public void continueAsGuestButtonPressed(View v)
+    {
+        this.fname = this.fnameET.getText().toString();
+        this.lname = this.lnameET.getText().toString();
+        this.email = this.emailET.getText().toString();
+
         if (fname != null && lname != null && email != null)
         {
             createUser(fname, lname, email);
