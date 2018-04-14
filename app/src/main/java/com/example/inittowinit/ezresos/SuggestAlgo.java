@@ -8,4 +8,10 @@ import java.util.List;
 
 public class SuggestAlgo {
 
+    public void function(int numOfStudents, int classroomMax,)
+    {
+        if(numOfStudents > classroomMax){
+
+        }
+    }
 }
