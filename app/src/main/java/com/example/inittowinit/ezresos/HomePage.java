@@ -16,6 +16,12 @@ public class HomePage extends AppCompatActivity
 
     }
 
+    public void reserveRoomManButtonPressed (View v)
+    {
+        Intent i = new Intent(this, manual_reservation.class);
+        this.startActivity(i);
+    }
+
     public void reserveRoomGenButtonPressed (View v)
     {
         Intent i = new Intent(this, UserInfo.class);
