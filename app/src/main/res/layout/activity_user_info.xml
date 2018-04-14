@@ -165,11 +165,11 @@
 
                 <TextView
                     android:id="@+id/noOfPeopleTV"
-                    android:layout_width="wrap_content"
+                    android:layout_width="168dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@android:color/darker_gray"
-                    android:text="No of people"
+                    android:text="Num of people"
                     android:textColor="@android:color/background_dark"
                     android:textSize="24sp" />
 
