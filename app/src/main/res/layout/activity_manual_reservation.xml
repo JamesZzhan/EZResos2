@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--suppress AndroidUnknownAttribute -->
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -15,7 +14,7 @@
         tools:layout_editor_absoluteY="6dp">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/room"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=" Room" />
@@ -28,26 +27,55 @@
 >>>>>>> Stashed changes
 
         <ListView
+            android:id="@+id/roomView"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:scrollbars="vertical" />
 
+        =======
+
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/people"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
-=======
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:text="Number of people" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-        </ScrollView>
->>>>>>> Stashed changes
+        <EditText
+            android:id="@+id/peopleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number" />
+
+
+        <TextView
+            android:id="@+id/startTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="startTime" />
+
+        <EditText
+            android:id="@+id/startTimeET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="time" />
+
+        <TextView
+            android:id="@+id/endTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="endTime" />
+
+        <EditText
+            android:id="@+id/endTimeET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="time" /><![CDATA[
+
+        >>>>>>> Stashed changes
+    ]]>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
