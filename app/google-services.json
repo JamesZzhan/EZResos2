@@ -15,11 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "693701828911-9lq52mmincrtatetq1io2famssoeu20t.apps.googleusercontent.com",
+          "client_id": "693701828911-d1oor9lhc0l1m4b3ln4g0hcjv86csi73.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.inittowinit.ezresos",
-            "certificate_hash": "4526a64937aa7858b0208b0ef7a21208f261e42b"
+            "certificate_hash": "cd1c0a939625ca2d6c2ea4633b9b108b2049953d"
           }
         },
         {
