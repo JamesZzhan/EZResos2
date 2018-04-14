@@ -22,7 +22,7 @@ public class HomePage extends AppCompatActivity
         this.startActivity(i);
     }
 
-    public void reserveRoomGenButtonPressed (View v)
+    public void generateRoomPressed (View v)
     {
         Intent i = new Intent(this, UserInfo.class);
         this.startActivity(i);
