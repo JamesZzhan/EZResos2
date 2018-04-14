@@ -1,5 +1,7 @@
 package com.example.inittowinit.ezresos;
 
+import android.util.Pair;
+
 import java.util.*;
 import java.io.*;
 
