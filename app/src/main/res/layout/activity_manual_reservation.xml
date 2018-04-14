@@ -13,11 +13,11 @@
         tools:layout_editor_absoluteX="10dp"
         tools:layout_editor_absoluteY="6dp">
 
-        <TextView
-            android:id="@+id/room"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=" Room" />
+            <TextView
+                android:id="@+id/room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Room" /><![CDATA[
 =======
         android:layout_width="395dp"
         android:layout_height="437dp"
@@ -26,15 +26,18 @@
         tools:layout_editor_absoluteY="8dp">
 >>>>>>> Stashed changes
 
-        <ListView
-            android:id="@+id/roomView"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:scrollbars="vertical" />
-
         =======
 
-        <TextView
+        ]]>
+
+            <EditText
+                android:id="@+id/roomName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
             android:id="@+id/people"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -72,7 +75,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="time" /><![CDATA[
+            android:inputType="time" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date" />
+
+            <EditText
+                android:id="@+id/dateView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date" />
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onSubmitButtonClicked"
+                android:text="submit" /><![CDATA[
 
         >>>>>>> Stashed changes
     ]]>
