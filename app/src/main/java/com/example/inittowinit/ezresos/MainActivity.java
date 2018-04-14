@@ -36,30 +36,7 @@ public class MainActivity extends AppCompatActivity
         this.lnameET = (EditText)this.findViewById(R.id.lnameTextBox);
         this.emailET = (EditText)this.findViewById(R.id.emailTextBox);
 
-        usersRef.addValueEventListener(new ValueEventListener()
-        {
 
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot)
-            {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                System.out.println(dataSnapshot.toString());
-                for(DataSnapshot child : dataSnapshot.getChildren())
-                {
-                    User value = child.getValue(User.class);
-                    value.display();
-                }
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError error)
-            {
-                // Failed to read value
-                System.out.println("********* Failed to read value. " + error.toException());
-            }
-        });
     }
 
     public void continueAsGuestButtonPressed(View v)
@@ -77,7 +54,7 @@ public class MainActivity extends AppCompatActivity
     public void createUser(String fname, String lname, String email)
     {
         DatabaseReference tempUser = usersRef.push();
-        User usr = new User(fname, lname, email);
-        tempUser.setValue(usr);
+        User currUser = new User(fname, lname, email);
+        tempUser.setValue(currUser);
     }
 }
