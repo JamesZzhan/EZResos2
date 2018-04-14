@@ -47,7 +47,7 @@ public class HomePage extends AppCompatActivity
         Intent i = new Intent(this, manual_reservation.class);
         this.startActivity(i);
     }
-
+    
 
 
 }
