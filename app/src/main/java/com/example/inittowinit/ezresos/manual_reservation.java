@@ -34,7 +34,7 @@ public class manual_reservation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manual_reservation);
 
-        this.roomView = (ListView)this.findViewById(R.id.roomView);
+
         this.roomName = (EditText)this.findViewById(R.id.roomName);
         this.peopleView = (EditText)this.findViewById(R.id.peopleView);
         this.startTimeET = (EditText)this.findViewById(R.id.startTimeET);
