@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".HomePage" />
         <activity android:name=".equipCurrentReso"></activity>
+        <activity android:name=".manual_reservation"></activity>
     </application>
 
 </manifest>

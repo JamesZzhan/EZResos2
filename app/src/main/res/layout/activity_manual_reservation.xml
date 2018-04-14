@@ -7,6 +7,7 @@
     tools:context=".manual_reservation">
 
     <LinearLayout
+<<<<<<< Updated upstream
         android:layout_width="365dp"
         android:layout_height="440dp"
         android:orientation="vertical"
@@ -18,17 +19,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=" Room" />
+=======
+        android:layout_width="395dp"
+        android:layout_height="437dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+>>>>>>> Stashed changes
 
         <ListView
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:scrollbars="vertical" />
 
+<<<<<<< Updated upstream
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView" />
+=======
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+>>>>>>> Stashed changes
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
