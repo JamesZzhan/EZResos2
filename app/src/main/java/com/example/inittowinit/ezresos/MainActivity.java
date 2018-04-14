@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity
         for(int i = 0; i < 20; i++)
         {
             DatabaseReference tempClassroom = classroomRef.push();
-            Classroom clsrm = new Classroom("AL" + r.nextInt(15) + 7, r.nextInt(20) + 45);
+            Classroom clsrm = new Classroom("AL" + i, r.nextInt(20) + 45);
             tempClassroom.setValue(clsrm);
         }
     }

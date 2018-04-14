@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Reservation
 {
-    public Classroom room;
+    public String room;
     public String reserveDate;
     public int startTime;
     public User registeredUser;
@@ -16,7 +16,7 @@ public class Reservation
         //default constructor
     }
 
-    public Reservation(Classroom room, String reserveDate, int startTime, int classSize, User registeredUser)
+    public Reservation(String room, String reserveDate, int startTime, int classSize)
     {
         this.room = room;
         this.reserveDate = reserveDate;
