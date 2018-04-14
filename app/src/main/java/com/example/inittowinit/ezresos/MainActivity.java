@@ -1,5 +1,6 @@
 package com.example.inittowinit.ezresos;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity
         if (fname != null && lname != null && email != null)
         {
             createUser(fname, lname, email);
+            loadHomePage();
         }
     }
 
@@ -56,5 +58,11 @@ public class MainActivity extends AppCompatActivity
         DatabaseReference tempUser = usersRef.push();
         User currUser = new User(fname, lname, email);
         tempUser.setValue(currUser);
+    }
+
+    public void loadHomePage()
+    {
+        Intent intent = new Intent(this, HomePage.class);
+        startActivity(intent);
     }
 }
