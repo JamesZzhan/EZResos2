@@ -1,22 +1,26 @@
 package com.example.inittowinit.ezresos;
 
+import java.util.ArrayList;
+
 public class Reservation
 {
+    public Classroom room;
     public String reserveDate;
-    public String startTime;
-    public String classSize;
+    public int startTime;
     public User registeredUser;
+
+    public static ArrayList<Reservation> currentReservations;
 
     public Reservation()
     {
         //default constructor
     }
 
-    public Reservation(String reserveDate, String startTime, String classSize, User registeredUser)
+    public Reservation(Classroom room, String reserveDate, int startTime, int classSize, User registeredUser)
     {
+        this.room = room;
         this.reserveDate = reserveDate;
         this.startTime = startTime;
-        this.classSize = classSize;
         this.registeredUser = registeredUser;
     }
 }
