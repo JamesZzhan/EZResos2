@@ -2,10 +2,13 @@ package com.example.inittowinit.ezresos;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class UserInfo extends AppCompatActivity {
+public class UserInfo extends AppCompatActivity
+{
     private TextView studentIDTV;
     private EditText studentIDET;
     private TextView bookingDateTV;
@@ -14,6 +17,7 @@ public class UserInfo extends AppCompatActivity {
     private EditText startTimeET;
     private TextView noOfPeopleTV;
     private EditText noOfPeopleET;
+    private Button generateBT;
 
 
     @Override
@@ -29,5 +33,13 @@ public class UserInfo extends AppCompatActivity {
         this.startTimeET = (EditText)this.findViewById(R.id.startTimeET);
         this.noOfPeopleTV = (TextView)this.findViewById(R.id.noOfPeopleTV);
         this.noOfPeopleET = (EditText)this.findViewById(R.id.noOfPeopleET);
+        this.generateBT = (Button)this.findViewById(R.id.generateBT);
+    }
+    public void onGenerateButtonClicked(View v)
+    {
+       
+        String studentID = this.studentIDET.getText().toString();
+        String date = this.dateET.getText().toString();
+
     }
 }
