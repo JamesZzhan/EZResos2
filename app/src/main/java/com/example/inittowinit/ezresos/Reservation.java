@@ -10,6 +10,7 @@ public class Reservation
     public User registeredUser;
 
     public static ArrayList<Reservation> currentReservations = new ArrayList<>();
+    public static Reservation selectedReservation = null;
 
     public Reservation()
     {
