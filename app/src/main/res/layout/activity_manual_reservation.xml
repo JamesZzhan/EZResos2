@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".manual_reservation">
 
-    <Updated
+    <LinearLayout
         android:layout_width="365dp"
         android:layout_height="440dp"
         android:orientation="vertical"
@@ -48,6 +48,6 @@
                 android:orientation="vertical" />
         </ScrollView>
 >>>>>>> Stashed changes
-    </Updated>
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
