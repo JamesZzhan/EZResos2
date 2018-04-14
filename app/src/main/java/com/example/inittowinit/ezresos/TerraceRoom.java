@@ -1,20 +1,21 @@
 package com.example.inittowinit.ezresos;
 
 public class TerraceRoom {
-    public String maxPersons;
+    public int maxPersons;
     public String availability;
-    public String mEmail;
+    public int studentID;
 
 
     public TerraceRoom() {
-        // Default constructor required for calls to DataSnapshot.getValue(User.class)
+        // Default constructor required for calls to DataSnapshot.getValue(TerraceRoom.class)
     }
 
-    public TerraceRoom(String fname, String lname, String email)
+    public TerraceRoom(int studID, int maxPer, String avail)
     {
-        this.maxPersons = fname;
-        this.availability = lname;
-        this.mEmail = email;
+        this.maxPersons = maxPer;
+        this.availability = avail;
+        this.studentID = studID;
+
 
     }
 
