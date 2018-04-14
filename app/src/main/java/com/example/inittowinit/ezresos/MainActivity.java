@@ -46,18 +46,22 @@ public class MainActivity extends AppCompatActivity
         this.lname = this.lnameET.getText().toString();
         this.email = this.emailET.getText().toString();
 
-        if (fname != null && lname != null && email != null)
+
+        createUser(fname, lname, email);
+        if(currUser != null)
         {
-            createUser(fname, lname, email);
-            loadHomePage();
+        loadHomePage();
         }
     }
 
     public void createUser(String fname, String lname, String email)
     {
-        DatabaseReference tempUser = usersRef.push();
-        currUser = new User(fname, lname, email);
-        tempUser.setValue(currUser);
+        if (fname != null && lname != null && email != null)
+        {
+            DatabaseReference tempUser = usersRef.push();
+            currUser = new User(fname, lname, email);
+            tempUser.setValue(currUser);
+        }
     }
 
     public void loadHomePage()
