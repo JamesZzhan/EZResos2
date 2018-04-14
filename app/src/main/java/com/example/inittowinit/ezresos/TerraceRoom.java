@@ -3,18 +3,18 @@ package com.example.inittowinit.ezresos;
 public class TerraceRoom {
     public int maxPersons;
     public String availability;
-    public int studentID;
+    public int userID;
 
 
     public TerraceRoom() {
         // Default constructor required for calls to DataSnapshot.getValue(TerraceRoom.class)
     }
 
-    public TerraceRoom(int studID, int maxPer, String avail)
+    public TerraceRoom(int useID, int maxPer, String avail)
     {
         this.maxPersons = maxPer;
         this.availability = avail;
-        this.studentID = studID;
+        this.userID = useID;
 
 
     }
@@ -22,7 +22,8 @@ public class TerraceRoom {
     public void display()
     {
         System.out.println("***** USER *****");
-        System.out.println("Fname: " + this.mfname);
-        System.out.println("Lname: " + this.mlname);
+        System.out.println("Max Persons: " + this.maxPersons);
+        System.out.println("Availability: " + this.availability);
+        System.out.println("Student/Faculty ID: " + this.userID);
     }
 }
