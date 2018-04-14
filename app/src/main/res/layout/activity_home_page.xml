@@ -34,11 +34,11 @@
                     android:text="Reserve A Room Manually" />
 
                 <Button
-                    android:id="@+id/reserveARoomGenButton"
+                    android:id="@+id/generateRoomButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="generateRoomButtonPressed"
+                    android:onClick="generateRoomPressed"
                     android:text="Generate a Room" />
 
                 <Button
