@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomePage" />
+        <activity android:name=".HomePage"></activity>
         <activity android:name=".equipCurrentReso"></activity>
         <activity android:name=".manual_reservation"></activity>
     </application>
