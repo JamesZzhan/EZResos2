@@ -18,7 +18,6 @@
         </activity>
         <activity android:name=".HomePage"></activity>
         <activity android:name=".UserInfo"></activity>
-        <activity android:name=".equipCurrentReso"></activity>
         <activity android:name=".manual_reservation"></activity>
     </application>
 

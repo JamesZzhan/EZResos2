@@ -42,14 +42,6 @@
                     android:text="Generate a Room" />
 
                 <Button
-                    android:id="@+id/equipToExistRoomButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="equipForExistResoButtonPressed"
-                    android:text="Equipment To Existing Room" />
-
-                <Button
                     android:id="@+id/cancelReservationButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
