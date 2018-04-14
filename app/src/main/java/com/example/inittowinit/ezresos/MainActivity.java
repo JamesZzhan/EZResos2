@@ -1,15 +1,13 @@
 package com.example.inittowinit.ezresos;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 
 public class MainActivity extends AppCompatActivity
@@ -23,12 +21,15 @@ public class MainActivity extends AppCompatActivity
     private String lname;
     private String email;
 
+    public User currUser;
+
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference usersRef = database.getReference("users");
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+        System.out.println("*********************here");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -36,30 +37,7 @@ public class MainActivity extends AppCompatActivity
         this.lnameET = (EditText)this.findViewById(R.id.lnameTextBox);
         this.emailET = (EditText)this.findViewById(R.id.emailTextBox);
 
-        usersRef.addValueEventListener(new ValueEventListener()
-        {
 
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot)
-            {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                System.out.println(dataSnapshot.toString());
-                for(DataSnapshot child : dataSnapshot.getChildren())
-                {
-                    User value = child.getValue(User.class);
-                    value.display();
-                }
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError error)
-            {
-                // Failed to read value
-                System.out.println("********* Failed to read value. " + error.toException());
-            }
-        });
     }
 
     public void continueAsGuestButtonPressed(View v)
@@ -71,13 +49,20 @@ public class MainActivity extends AppCompatActivity
         if (fname != null && lname != null && email != null)
         {
             createUser(fname, lname, email);
+            loadHomePage();
         }
     }
 
     public void createUser(String fname, String lname, String email)
     {
         DatabaseReference tempUser = usersRef.push();
-        User usr = new User(fname, lname, email);
-        tempUser.setValue(usr);
+        currUser = new User(fname, lname, email);
+        tempUser.setValue(currUser);
+    }
+
+    public void loadHomePage()
+    {
+        Intent intent = new Intent(this, HomePage.class);
+        startActivity(intent);
     }
 }

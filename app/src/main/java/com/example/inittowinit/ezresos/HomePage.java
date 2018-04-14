@@ -18,9 +18,36 @@ public class HomePage extends AppCompatActivity
 
     public void reserveRoomManButtonPressed (View v)
     {
-        Intent i = new Intent(this, MainActivity.class);
+        Intent i = new Intent(this, manual_reservation.class);
         this.startActivity(i);
     }
+
+    public void reserveRoomGenButtonPressed (View v)
+    {
+        Intent i = new Intent(this, UserInfo.class);
+        this.startActivity(i);
+    }
+    public void equipForExistResoButtonPressed (View v)
+    {
+        Intent i = new Intent(this, equipCurrentReso.class);
+        this.startActivity(i);
+    }
+    public void cancelResoButtonPressed (View v)
+    {
+        Intent i = new Intent(this, manual_reservation.class);
+        this.startActivity(i);
+    }
+    public void myResosButtonPressed (View v)
+    {
+        Intent i = new Intent(this, manual_reservation.class);
+        this.startActivity(i);
+    }
+    public void profileButtonPressed (View v)
+    {
+        Intent i = new Intent(this, manual_reservation.class);
+        this.startActivity(i);
+    }
+    
 
 
 }
