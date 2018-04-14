@@ -9,7 +9,7 @@ public class Reservation
     public int startTime;
     public User registeredUser;
 
-    public static ArrayList<Reservation> currentReservations;
+    public static ArrayList<Reservation> currentReservations = new ArrayList<>();
 
     public Reservation()
     {

@@ -9,6 +9,8 @@ import android.widget.EditText;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Random;
+
 
 public class MainActivity extends AppCompatActivity
 {
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference usersRef = database.getReference("users");
+    DatabaseReference classroomRef = database.getReference("classrooms");
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -37,7 +40,13 @@ public class MainActivity extends AppCompatActivity
         this.lnameET = (EditText)this.findViewById(R.id.lnameTextBox);
         this.emailET = (EditText)this.findViewById(R.id.emailTextBox);
 
-
+        Random r = new Random();
+        for(int i = 0; i < 20; i++)
+        {
+            DatabaseReference tempClassroom = classroomRef.push();
+            Classroom clsrm = new Classroom("AL" + r.nextInt(15) + 7, r.nextInt(20) + 45);
+            tempClassroom.setValue(clsrm);
+        }
     }
 
     public void continueAsGuestButtonPressed(View v)
