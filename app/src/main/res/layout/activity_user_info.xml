@@ -19,6 +19,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="horizontal">
 
             <TextView
@@ -26,7 +27,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Student ID" />
+                android:background="?attr/colorControlHighlight"
+                android:text="Student ID"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="24sp" />
 
             <EditText
                 android:id="@+id/studentIDET"
@@ -34,10 +38,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
+                android:gravity="center_horizontal"
                 android:hint="Enter ID number"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColor="@android:color/holo_red_dark" />
 
         </LinearLayout>
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
