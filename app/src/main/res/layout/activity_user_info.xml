@@ -30,7 +30,7 @@
                 android:layout_weight="1"
                 android:background="@android:color/darker_gray"
                 android:text="Student ID"
-                android:textColor="@android:color/holo_red_dark"
+                android:textColor="@android:color/background_dark"
                 android:textSize="30sp" />
 
             <EditText
@@ -64,6 +64,7 @@
                     android:layout_weight="1"
                     android:background="@android:color/darker_gray"
                     android:text="Booking Date"
+                    android:textColor="@android:color/background_dark"
                     android:textSize="24sp"
                     tools:layout_editor_absoluteX="81dp"
                     tools:layout_editor_absoluteY="268dp" />
