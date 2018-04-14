@@ -2,14 +2,12 @@ package com.example.inittowinit.ezresos;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-//lol
-public class MainActivity extends AppCompatActivity
-{
+
+public class UserInfo extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_user_info);
     }
 }
