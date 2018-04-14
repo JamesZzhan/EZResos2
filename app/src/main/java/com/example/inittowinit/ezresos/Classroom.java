@@ -7,8 +7,6 @@ public class Classroom {
     public String date;
     public static int time;
     private static int classroomMax;
-    private static in
-
 
 
     public static void main(String args[]) {
@@ -23,9 +21,9 @@ public class Classroom {
         rooms.add("Bluff");
         //Times
         if (time < 0 || time > 2400) {
-            System.out.println("Please enter a valid time between 0000-2400!")
+            System.out.println("Please enter a valid time between 0000-2400!");
         }
-        SuggestAlgo(, classroomMax);
+        SuggestAlgo( classroomMax);
     }
 
 

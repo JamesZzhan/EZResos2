@@ -2,7 +2,7 @@ package com.example.inittowinit.ezresos;
 
 public class TerraceRoom {
     public String maxPersons;
-    public String availabilty;
+    public String availability;
     public String mEmail;
 
 
@@ -12,8 +12,8 @@ public class TerraceRoom {
 
     public TerraceRoom(String fname, String lname, String email)
     {
-        this.mfname = fname;
-        this.mlname = lname;
+        this.maxPersons = fname;
+        this.availability = lname;
         this.mEmail = email;
 
     }
