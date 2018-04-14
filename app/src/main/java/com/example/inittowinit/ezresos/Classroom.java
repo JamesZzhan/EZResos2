@@ -25,7 +25,7 @@ public class Classroom {
         if (time < 0 || time > 2400) {
             System.out.println("Please enter a valid time between 0000-2400!");
         }
-        SuggestAlgo( classroomMax);
+        //SuggestAlgo( classroomMax);
     }
 
 
