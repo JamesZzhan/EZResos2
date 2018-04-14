@@ -8,6 +8,9 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -24,9 +27,10 @@ public class manual_reservation extends AppCompatActivity {
 
     private Button submit;
 
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference reservationsRef = database.getReference("reservation");
 
-
-
+    public Reservation currRes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -48,10 +52,25 @@ public class manual_reservation extends AppCompatActivity {
     public void onSubmitButtonClicked(View v)
     {
         String roomName = this.roomName.getText().toString();
-        String startTime = this.startTimeET.getText().toString();
+        int startTime = Integer.parseInt(startTimeET.getText().toString());
         String endTime = this.endTimeET.getText().toString();
         String date = this.dateView.getText().toString();
-        String peopleNumber = this.peopleView.getText().toString();
+        int peopleNumber = Integer.parseInt(peopleView.getText().toString());
+
+        for(int i = 0; i <= Classroom.allClassrooms.size(); i++)
+        {
+            if (Classroom.allClassrooms.contains(roomName))
+            {
+                if (peopleNumber <= Classroom.allClassrooms.get(i).roomSize)
+                {
+                    DatabaseReference tempRes = reservationsRef.push();
+                    currRes = new Reservation(roomName, date, startTime, peopleNumber);
+                    tempRes.setValue(currRes);
+                    Reservation.currentReservations.add(currRes);
+                    User.myReservations.add(currRes);
+                }
+            }
+        }
     }
 
 

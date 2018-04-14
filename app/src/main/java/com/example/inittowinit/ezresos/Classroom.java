@@ -10,6 +10,8 @@ public class Classroom
     public String location;
     public int roomSize;
 
+    public static ArrayList<Classroom> allClassrooms = new ArrayList<>();
+
     public Classroom()
     {
         //Basic constructor

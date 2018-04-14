@@ -21,18 +21,14 @@ public class SuggestAlgo
         //basic constructor
     }
 
-    public SuggestAlgo(Classroom room, String date, int startTime, int numOfStudents, int classroomMax, User currUser)
+    public SuggestAlgo(String data, String startTime, int numStudents)
     {
-        if(Reservation.currentReservations.contains(room))
+        for(int i = 0; i <= Classroom.allClassrooms.size(); i++)
         {
-                if (numOfStudents <= classroomMax)
-                {
-                    DatabaseReference tempRes = reservationsRef.push();
-                    currRes = new Reservation(room, date, startTime, numOfStudents, currUser);
-                    tempRes.setValue(currRes);
-                    Reservation.currentReservations.add(currRes);
-                    User.myReservations.add(currRes);
-                }
+            if(numStudents <= Classroom.allClassrooms.get(i).roomSize)
+            {
+                System.out.println(Classroom.allClassrooms.get(i).location);
+            }
         }
     }
 }
