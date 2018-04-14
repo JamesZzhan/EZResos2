@@ -30,21 +30,16 @@ public class HomePage extends AppCompatActivity
 
     public void cancelResoButtonPressed (View v)
     {
-        Intent i = new Intent(this, manual_reservation.class);
+        Intent i = new Intent(this, myListOfResos.class);
         this.startActivity(i);
     }
 
     public void myResosButtonPressed (View v)
     {
-        Intent i = new Intent(this, manual_reservation.class);
+        Intent i = new Intent(this,myListOfResos.class);
         this.startActivity(i);
     }
 
-    public void profileButtonPressed (View v)
-    {
-        Intent i = new Intent(this, manual_reservation.class);
-        this.startActivity(i);
-    }
     
 
 
