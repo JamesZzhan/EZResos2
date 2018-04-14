@@ -105,7 +105,7 @@
                     android:textSize="30sp" />
 
                 <EditText
-                    android:id="@+id/studentIDET2"
+                    android:id="@+id/startTimeET"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
