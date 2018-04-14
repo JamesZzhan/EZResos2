@@ -36,7 +36,7 @@ public class HomePage extends AppCompatActivity
 
     public void myResosButtonPressed (View v)
     {
-        Intent i = new Intent(this,myListOfResos.class);
+        Intent i = new Intent(this, myListOfResos.class);
         this.startActivity(i);
     }
 

@@ -8,6 +8,12 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 public class myListOfResos extends AppCompatActivity
 {
     private ListView myReservationList;
@@ -26,16 +32,17 @@ public class myListOfResos extends AppCompatActivity
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent i = new Intent(rList, delete.class);
-                Reservation.selectedReservation = Reservation.currentReservation.get(position);
+                Reservation.selectedReservation = Reservation.currentReservations.get(position);
                 rList.startActivity(i);
             }
         });
 
-        final ArrayAdapter<Question> adapter = new ArrayAdapter<Question>(this, android.R.layout.simple_list_item_1,Core.theQuestions);
-        this.theQuestionList.setAdapter(adapter);
+        final ArrayAdapter<Reservation> adapter = new ArrayAdapter<Reservation>(this, android.R.layout.simple_list_item_1,Reservation.currentReservations);
+        this.myReservationList.setAdapter(adapter);
 
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference().child("questions");
-        ValueEventListener questionListener = new ValueEventListener() {
+        ValueEventListener questionListener = new ValueEventListener()
+        {
             @Override
 
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -44,13 +51,12 @@ public class myListOfResos extends AppCompatActivity
 
                 for(DataSnapshot aClass : dataSnapshot.getChildren())
                 {
-                    for(DataSnapshot aQuestion: aClass.getChildren())
+                    for(DataSnapshot aReservation: aClass.getChildren())
                     {
-                        System.out.println("*******************" + aQuestion.toString());
-                        System.out.println(aQuestion.child("title").getValue() + " " + aQuestion.child("question").getValue() + " " + aQuestion.child("course").getValue());
-                        Question temp = new Question(aQuestion.child("title").getValue().toString(), aQuestion.child("question").getValue().toString(), aQuestion.child("course").getValue().toString());
-                        temp.setKey(aQuestion.getKey().toString());
-                        Core.theQuestions.add(temp);
+
+                       // Reservation temp = new Reservation(aReservation.child("Room").getValue().toString(), aReservation.child("Date").getValue().toString(), aReservation.child("Time").getValue().toString());
+                        //temp.setKey(aReservation.getKey().toString());
+                        //if()
                     }
                 }
                 adapter.notifyDataSetChanged();

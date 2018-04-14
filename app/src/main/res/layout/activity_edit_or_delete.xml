@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".delete">
+    tools:context=".editOrDelete">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Are You Sure You Want To Delete This Reservation?" />
+                    android:text="What would you like to do?" />
 
             </LinearLayout>
 
@@ -51,16 +51,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="yesButtonPressed"
-                    android:text="Yes" />
+                    android:text="Edit" />
 
                 <Button
                     android:id="@+id/button6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="noButtonPressed"
-                    android:text="No" />
+                    android:text="Delete" />
 
             </LinearLayout>
 
@@ -73,4 +71,5 @@
         </LinearLayout>
 
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

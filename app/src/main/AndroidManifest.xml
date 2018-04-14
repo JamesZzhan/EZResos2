@@ -20,7 +20,8 @@
         <activity android:name=".UserInfo" />
         <activity android:name=".manual_reservation" />
         <activity android:name=".myListOfResos" />
-        <activity android:name=".delete"></activity>
+        <activity android:name=".delete" />
+        <activity android:name=".editOrDelete"></activity>
     </application>
 
 </manifest>
