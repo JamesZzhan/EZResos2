@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "693701828911",
+    "firebase_url": "https://ezresos.firebaseio.com",
+    "project_id": "ezresos",
+    "storage_bucket": "ezresos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693701828911:android:26bb38fb4e940546",
+        "android_client_info": {
+          "package_name": "com.example.inittowinit.ezresos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693701828911-d1oor9lhc0l1m4b3ln4g0hcjv86csi73.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.inittowinit.ezresos",
+            "certificate_hash": "cd1c0a939625ca2d6c2ea4633b9b108b2049953d"
+          }
+        },
+        {
+          "client_id": "693701828911-6gu8reb8gt2ol9fhkk8l8mobkuifq5nk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAclGWCWMc1AtGhiTzV6OauukL9w-Odezc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693701828911-6gu8reb8gt2ol9fhkk8l8mobkuifq5nk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
